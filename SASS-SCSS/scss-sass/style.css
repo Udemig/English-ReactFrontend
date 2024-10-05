@@ -1,0 +1,153 @@
+.btn-1 {
+  background-color: #ff5733;
+  padding: 5px;
+  font-size: 4px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.btn-1:hover {
+  opacity: 0.8;
+}
+
+.btn-2 {
+  background-color: #33ff57;
+  padding: 10px;
+  font-size: 8px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.btn-2:hover {
+  opacity: 0.8;
+}
+
+.btn-3 {
+  background-color: #3357ff;
+  padding: 15px;
+  font-size: 12px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.btn-3:hover {
+  opacity: 0.8;
+}
+
+.btn-4 {
+  background-color: #ff33a1;
+  padding: 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.btn-4:hover {
+  opacity: 0.8;
+}
+
+.btn-5 {
+  background-color: #ffcc33;
+  padding: 25px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+.btn-5:hover {
+  opacity: 0.8;
+}
+
+body {
+  background-color: rgb(215, 162, 234);
+}
+
+.card-container {
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: pink;
+  color: rgb(86, 77, 77);
+  font-size: 15px;
+}
+.card-container img {
+  border-radius: 5px;
+}
+.card-container h3 {
+  text-transform: uppercase;
+}
+.card-container p {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 20px;
+}
+
+/* This CSS will print because %message-shared is extended. */
+.warning, .error, .success, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.message {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.message {
+  background-color: aqua;
+}
+
+.success {
+  border-color: green;
+  background-color: green;
+}
+
+.error {
+  border-color: red;
+  background-color: red;
+}
+
+.warning {
+  border-color: yellow;
+  background-color: yellow;
+}
+
+.btn-2, .btn-1 {
+  padding: 20px 10px;
+  font-size: xx-large;
+  background-color: rgb(76, 76, 227);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.btn-1 {
+  color: white;
+}
+
+.btn-2 {
+  background-color: black;
+  color: white;
+}
+
+body {
+  background-color: black;
+  color: #fff;
+}
+
+.btn-3 {
+  color: lighten red, 30%;
+}/*# sourceMappingURL=style.css.map */

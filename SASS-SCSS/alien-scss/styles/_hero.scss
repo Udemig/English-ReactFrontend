@@ -1,0 +1,60 @@
+@import "colors";
+
+.hero {
+  background-color: $light;
+  &-container {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    height: 90vh;
+    z-index: 99;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    &-left {
+      width: 100%;
+      line-height: 1.2;
+      padding-left: 25px;
+    }
+    &-left h1 {
+      color: $lime;
+      font-size: 70px;
+    }
+    &-left h2 {
+      font-size: 60px;
+      color: $dark;
+    }
+    &-left p {
+      font-size: 30px;
+      color: $dark;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    &-left-btn {
+      font-size: 20px;
+      background-color: $lime;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: $light;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 20px;
+      outline: none;
+      border: none;
+      border-radius: 5px;
+   
+    }
+    &-right {
+        text-align: center;
+    }
+    &-right img{
+        height: 100%;
+        width: 100%;
+    }
+  }
+}

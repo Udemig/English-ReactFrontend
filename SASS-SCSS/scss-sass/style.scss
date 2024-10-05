@@ -1,0 +1,167 @@
+@import "button"; // importing the module
+body {
+  background-color: rgb(215, 162, 234);
+}
+// variable
+$font-size: 15px;
+$btn-color: purple;
+$text-color: rgb(86, 77, 77);
+$card-color: pink;
+
+// .card-container {
+//     width: 300px;
+//     height: 400px;
+//     padding: 20px;
+//     margin: auto;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     background-color: $card-color ;
+//     color: $text-color;
+//     font-size: $font-size;
+
+// }
+// nesting
+.card-container {
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $card-color;
+  color: $text-color;
+  font-size: $font-size;
+
+  img {
+    border-radius: 5px;
+  }
+  h3 {
+    text-transform: uppercase;
+  }
+  p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+  }
+}
+// @mixins
+@mixin align {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@mixin sizes($width: 100px) {
+  width: $width;
+  height: 100px;
+  padding: 10px;
+}
+
+@mixin theme($theme: DarkGray) {
+  background: $theme;
+  box-shadow: 0 0 1px rgba($theme, 0.25);
+  color: #fff;
+}
+@mixin dark-gray-mode($background: black) {
+  background-color: $background;
+  color: #fff;
+}
+
+// .info {
+//   @include theme;
+//   @include sizes($width: 200px);
+//   @include align;
+// }
+// .alert {
+//   @include theme($theme: DarkRed);
+//   @include sizes;
+//   @include align;
+// }
+// .successi {
+//   @include theme($theme: DarkGreen);
+//   @include sizes;
+//   @include align;
+// }
+
+// inheritance/ @extend
+/* This CSS will print because %message-shared is extended. */
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+// This CSS won't print because %equal-heights is never extended.
+%equal-heights {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.message {
+  @extend %message-shared;
+  background-color: aqua;
+  @extend %equal-heights;
+}
+
+.success {
+  @extend %message-shared;
+  border-color: green;
+  background-color: green;
+}
+
+.error {
+  @extend %message-shared;
+  border-color: red;
+  background-color: red;
+}
+
+.warning {
+  @extend %message-shared;
+  border-color: yellow;
+  background-color: yellow;
+}
+
+// example to extend mixin and include
+%default-button {
+  padding: 20px 10px;
+  font-size: xx-large;
+  background-color: rgb(76, 76, 227);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+@mixin dark($background-color: black) {
+  background-color: $background-color;
+  color: white;
+}
+
+.btn-1 {
+  @extend %default-button;
+  color: white;
+}
+.btn-2 {
+  @include dark;
+  @extend %default-button;
+}
+
+// functions for button
+// @if @else @while @foreach
+$theme: dark;
+body {
+  @if $theme == "dark" {
+    background-color: black;
+    color: #fff;
+  } @else {
+    background-color: #fff;
+    color: black;
+  }
+}
+// usage of function
+@function lighten($color, $amount) {
+  @return mix(white, $color, $amount);
+}
+$color: red;
+.btn-3 {
+  color: lighten ($color, 30%);
+}
+
+

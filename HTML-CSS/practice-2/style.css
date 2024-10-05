@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-y: scroll;
+  background-image: url("img-1.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+  /* background: linear-gradient(to right, #ffff); */
+  z-index: 1;
+  position: relative;
+}
+nav {
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  color: white;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.middle-part {
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-family: fantasy;
+  font-size: 40px;
+}
+.links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+.links li a {
+  text-decoration: none;
+  font-family: fantasy;
+  font-size: 20px;
+  color: white;
+}
+.btns {
+  margin: 10px;
+}
+.btns button {
+  color: black;
+  font-family: fantasy;
+  font-size: larger;
+  background-color: orange;
+  color: white;
+  margin: 10px;
+  padding: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.menu {
+  background-color: white;
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 30px;
+  font-family: fantasy;
+  font-weight: bolder;
+  font-size: larger;
+  opacity: 0.7;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.menu ul {
+  list-style: none;
+}

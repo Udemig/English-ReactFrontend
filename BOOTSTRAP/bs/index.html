@@ -1,0 +1,205 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="bg-primary">hello world</h1>
+    <p class="h1  text-primary">h1 Bootstrap heading</p>
+    <p class="h2 text-success">h2 Bootstrap heading</p>
+    <p class="h3 text-warning">h3 Bootstrap heading</p>
+    <p class="heading h4 bg-danger  ">h4 Bootstrap heading</p>
+    <p class="h5">h5 Bootstrap heading</p>
+    <p class="h6">h6 Bootstrap heading</p>
+    <!-- background colors  -->
+    <div class="container mt-3">
+        <h2>Background Color with Contrasting Text Color</h2>
+        <p class="bg-primary">This text is important.</p>
+        <p class="bg-success">This text indicates success.</p>
+        <p class="bg-info">This text represents some information.</p>
+        <p class="text-warning">This text represents a warning.</p>
+        <p class="bg-danger">This text represents danger.</p>
+        <p class="bg-secondary">Secondary background color.</p>
+        <p class="bg-dark">Dark grey background color.</p>
+        <p class="bg-light">Light grey background color.</p>
+    </div>
+    <!-- images -->
+    <div class="mx-auto d-block p-5 mt-3">
+        <img class=" rounded-circle bg-danger mt-3" src="gmball.webp" alt="">
+        <img class=" rounded-circle bg-danger" src="gmball.webp" alt="">
+    </div>
+    <!-- buttons -->
+    <button type="button" class="btn">Basic</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button type="button" class="btn btn-success">Success</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="submit-btn btn btn-link">Link</button>
+
+
+    <!-- dropdown   -->
+    <div class="dropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+            Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item active" href="#">active </a></li>
+            <li><a class="dropdown-item disabled" href="#">student</a></li>
+            <li><a class="dropdown-item" href="#">Link 3</a></li>
+        </ul>
+    </div>
+    <!-- collapse -->
+    <button class="bg-info" data-bs-toggle="collapse" data-bs-target="#demo">Collapsible</button>
+    <div class="collapse" id="demo">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus vel fugit quo architecto provident animi magni
+        sapiente harum sequi. Minus nisi vero assumenda fugiat cum. Nisi autem veritatis earum non!
+    </div>
+
+    <!-- card -->
+    <div class="card">
+        <div class="card-header">Header</div>
+        <div class="card-body">
+            <img src="gmball.webp" alt="">
+        </div>
+        <div class="card-footer">Footer</div>
+    </div>
+
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm bg-light">
+
+        <div class="container-fluid bg-secondary">
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link bg-dark text-light" href="#">Link 1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-warning text-light" href="#">Link 2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link 3</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- carousel -->
+    <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- Indicators/dots -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+        </div>
+
+        <!-- The slideshow/carousel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="gmball.webp" alt="Los Angeles" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="gumball-2.png" alt="Chicago" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="gumball-3.jpg" alt="New York" class="d-block w-100">
+            </div>
+        </div>
+
+        <!-- Left and right controls/icons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!-- modals -->
+    <div class="modal-dialog modal-sm bg-danger p-5 rounded-circle">
+        this is a modal
+    </div>
+
+    <!-- toast -->
+    <div class="toast show">
+        <div class="toast-header">
+            Toast Header
+            <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+        </div>
+        <div class="toast-body">
+            Some text inside the toast body
+        </div>
+    </div>
+
+    <!-- modes -->
+    <div class="dropdown" data-bs-theme="dark">
+
+    </div>
+    <!-- form -->
+    <form action="/action_page.php">
+        <div class="mb-3 mt-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="mb-3">
+            <label for="pwd" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+        </div>
+        <div class="form-check mb-3">
+            <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember"> Remember me
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <!-- select -->
+    <select class="form-select">
+        <option>1</option>
+        <option disabled>2</option>
+        <option>3</option>
+        <option>4</option>
+    </select>
+    <!-- grid usage -->
+    <div class="row">
+        <div class="col bg-danger">
+            <img src="gmball.webp" alt="">
+        </div>
+        <div class="col bg-dark">
+            <img src="gmball.webp" alt="">
+
+        </div>
+        <div class="col bg-info">
+            <img src="gmball.webp" alt="">
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- script part should be at the bottom but above the body close tag "</body>" -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

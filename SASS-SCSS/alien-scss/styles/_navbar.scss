@@ -1,0 +1,57 @@
+@import "colors";
+
+%align-center {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  background: $light;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  z-index: 9999;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  &-logo {
+    color: $dark;
+    text-decoration: none;
+    font-size: 40px;
+    @extend %align-center;
+  }
+  &-bars {
+    display: none;
+    // opcity:0
+  }
+  &-menu {
+    @extend %align-center;
+    list-style: none;
+    text-align: center;
+    gap: 20px;
+
+  }
+  &-menu-links {
+    @extend %align-center;
+    color: $dark;
+    justify-content: center;
+    text-decoration: none;
+    padding: 5px;
+    gap: 20px;
+    //margin-left: 20px;
+
+    &:hover {
+      color: $lime;
+      transition: all 0.3s ease;
+    }
+  }
+  #button {
+    background-color: $lime;
+    padding:10px;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    color: $light;
+  }
+}

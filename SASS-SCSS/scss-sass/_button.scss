@@ -1,0 +1,21 @@
+$colors: #ff5733, #33ff57, #3357ff, #ff33a1, #ffcc33;
+// usage of for 
+// @for $i from <start> through <end> {
+//     // Styles that use $i
+//   }
+@for $i from 1 through 5 {
+  .btn-#{$i} {
+    background-color: nth($colors, $i); // Set background color based on index
+    padding: $i * 5px; // Increase padding based on index
+    font-size: $i * 4px; // Increase font size based on index
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8; // Make the button slightly transparent on hover
+    }
+  }
+}
