@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+/* General Styles */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  animation: fadeInImage 2s ease-in-out forwards;
+}
+.hero-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+/* Hero Content Positioning */
+.hero-content-1 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 2.5s ease-in-out forwards;
+}
+.hero-content-2 {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes fadeInImage {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Optional overlay for better text visibility */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+/* cards */
+/* Card Styles */
+/* Card Container */
+.card {
+  position: relative;
+  border: none;
+  height: 400px; /* Adjust based on your content */
+  width: 100%; /* Full width */
+  background: none;
+  overflow: hidden; /* Hide overflow to ensure the background fits */
+}
+
+/* Background Image Styling */
+.card-img-overlay {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%; /* Full card height */
+  width: 100%; /* Full card width */
+  position: absolute; /* Absolutely position the image */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Behind the content */
+}
+/* Optional dark overlay for readability */
+.card-img-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Dark overlay for better readability */
+  z-index: 2;
+}
+.card-title,
+.card-text {
+  color: white;
+  margin-bottom: 10px;
+}
+.btn {
+  margin-top: 20px;
+  z-index: 3; /* Ensure buttons are visible */
+}
+.carousel-inner {
+  width: 100vw !important;
+  height: 100vh;
+}
+.carousel-item {
+  width: 100vw !important;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* animation */
+.image-container {
+  width: 100%;
+  overflow: hidden;
+}
+.image-wrapper {
+  display: flex;
+  animation: flow 10s linear infinite;
+}
+.image-wrapper img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+@keyframes flow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
