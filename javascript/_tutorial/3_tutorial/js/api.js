@@ -8,6 +8,12 @@ export async function fetchUser() {
     console.log(`Hata: ${error}`);
   }
 }
+function fetchProducts (){
+  fetch('https://api.escuelajs.co/api/v1/products')
+  .then((res)=> res.json())
+  .then((res)=>console.log(res))
+  .catch((error) => console.log(error))
+}
 // export statement
 // api call
 // fetching data asynchronously

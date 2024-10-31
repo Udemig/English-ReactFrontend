@@ -140,13 +140,12 @@ let person = {
     return `${this.firstName} ${this.lastName}`;
   },
 };
-
 console.log(person.fullName()); // Output: John Doe
 
 // 15	Nested Loops
 // Write nested for loops to create a multiplication table from 1 to 5. Display each multiplication expression and its result.
-for (let i = 1; i <= 5; i++) {
-  for (let j = 1; j <= 5; j++) {
+for (let i = 1; i <= 5; i++) { // 1,2,3,4,5
+  for (let j = 1; j <= 5; j++) { //1,2,3, 4, 5
     console.log(`${i} x ${j} = ${i * j}`);
   }
 }
@@ -182,13 +181,19 @@ const greet = function () {
 };
 
 console.log(greet()); // Output: Hello, World!
-
+//
+const subtract = function (a, b) {
+  return a-b
+}
+//
+const subtract1 = (a,b) => a-b;
 // 19	Arrow Functions
 // Convert the addNumbers function into an arrow function and use it to add 15 and 25. Display the sum.
 const addNumbers = (a, b) => a + b;
 
 const sum1 = addNumbers(15, 25);
 console.log("Sum:", sum); // Output: Sum: 40
+// 
 
 // 20	Date Manipulation
 // Calculate and display the number of days left until the end of the current month using the Date object.

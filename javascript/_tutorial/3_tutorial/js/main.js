@@ -19,7 +19,7 @@ let student = {
 };
 
 for (const key in student) {
-  container.innerHTML += `Student: ${student[key]}<br/>`;
+  container.innerHTML += `st info: ${student[key]}<br/>`;
 }
 container.innerHTML += "-----------------------------------<br/>";
 
@@ -33,6 +33,7 @@ for (const number of numbers) {
   container.innerHTML += `Number: ${number}<br/>`;
 }
 container.innerHTML += "-----------------------------------<br/>";
+
 
 // * Set Structure
 
@@ -74,11 +75,11 @@ container.innerHTML += "-----------------------------------<br/>";
 
 // console.log(age);
 
-// * Template Literals (Backticks)
+// * Template Literals (Backticks) / option-comma / dynamic data ${ variables}
 
 // Using template literals for easier string interpolation.
 
-let fullName = "John Doe";
+let fullName = "Raha";
 
 container.innerHTML += `1-) Classic: My name is ${fullName}, what is your name?<br/>`;
 container.innerHTML += `2-) Backtick: My name is ${fullName}, what is your name?<br/>`;
@@ -170,10 +171,10 @@ person.increase;
 container.innerHTML += `Person Counter: ${person.counter}<br/>`;
 
 // Preventing modification of the 'name' property
-Object.defineProperty(person, "name", { writable: false });
-// The above line prevents the 'name' property of the object from being modified
-person.name = "Sara";
-container.innerHTML += `Person Name: ${person.name}<br/>`;
+// Object.defineProperty(person, "name", { writable: false });
+// // The above line prevents the 'name' property of the object from being modified
+// person.name = "Sara";
+// container.innerHTML += `Person Name: ${person.name}<br/>`;
 
 Object.defineProperty(person, "school", {
   get: function () {
