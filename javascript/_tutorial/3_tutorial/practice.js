@@ -20,7 +20,8 @@ const car = {
     make: "Toyota",
     model: "Corolla",
     year: 2020,
-    color: "Blue"
+    color: "Blue",
+    isWorking: false
   };
   
   // Select the container
@@ -40,7 +41,7 @@ const car = {
 // exercise2.js
 
 // Define the languages array
-const languages = ["JavaScript", "Python", "Java", "C#", "Ruby"];
+const languages = ["JavaScript", "Python", "Java", "C#", "Ruby", "Raha"];
 
 // Select the container
 const outpu2 = document.getElementById('output');

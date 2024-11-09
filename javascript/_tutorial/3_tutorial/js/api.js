@@ -1,19 +1,20 @@
 // fetchUser function
 export async function fetchUser() {
   try {
-    fetch(`https://jsonplaceholder.typicode.com/users`)
+    fetch(`https://api.escuelajs.co/api/v1/products`) // ``: backtick( safer)'': quotation 
       .then((res) => res.json())
       .then((res) => console.log(res));
   } catch (error) {
     console.log(`Hata: ${error}`);
   }
 }
-function fetchProducts (){
+export function fetchProducts (){
   fetch('https://api.escuelajs.co/api/v1/products')
   .then((res)=> res.json())
   .then((res)=>console.log(res))
   .catch((error) => console.log(error))
 }
+fetchProducts()
 // export statement
 // api call
 // fetching data asynchronously

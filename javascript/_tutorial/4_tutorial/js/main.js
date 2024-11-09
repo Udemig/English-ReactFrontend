@@ -5,17 +5,24 @@
 
 // setTimeout
 // Used to execute a function after a specified delay.
-setTimeout(() => {
-  document.write(`setTimeout executed! <br/>`);
-}, 2000);
+// setTimeout(() => {
+//   document.write(`setTimeout executed! <br/>`);
+// }, 2000);
+// setTimeout(()=>{
+//   console.log('Im here ')
+// }, 5000)
 // Use Case:
 // setTimeout is like setting an alarm. For example, "Wake me up after 10 minutes."
 
 // setInterval
-// Used to execute a function repeatedly at specified intervals.
-setInterval(() => {
-  document.write(`setInterval executed! <br/>`);
-}, 2000);
+// // Used to execute a function repeatedly at specified intervals.
+// setInterval(() => {
+//   document.write(`setInterval executed! <br/>`);
+// }, 2000);
+// setInterval(() => {
+//   console.log("breaktime executed")
+// }, 3000);
+
 // Use Case:
 // setInterval is used to perform a task continuously at defined time intervals.
 ////////////////////////////////////////////////////////////////
@@ -31,30 +38,30 @@ setInterval(() => {
 // Rejected: The operation failed.
 
 // Example of a Promise
-const operation1 = () => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      document.write(`Operation 1 is in progress... <br/>`);
-      const hasError = false;
-      if (hasError) {
-        reject(`An error occurred during Operation 1`);
-      } else {
-        resolve(`Operation 1 completed successfully!`);
-      }
-    }, 2000);
-  });
-};
+// const operation1 = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       document.write(`Operation 1 is in progress... <br/>`);
+//       const hasError = false;
+//       if (hasError) {
+//         reject(`An error occurred during Operation 1`);
+//       } else {
+//         resolve(`Operation 1 completed successfully!`);
+//       }
+//     }, 2000);
+//   });
+// };
 
 // Usage
-operation1()
-  .then((message) => {
-    setTimeout(() => {
-      document.write(`${message} <br/>`);
-    }, 1000);
-  })
-  .catch((error) => {
-    document.write(`${error} <br/>`);
-  });
+// operation1()
+//   .then((message) => {
+//     setTimeout(() => {
+//       document.write(`${message} <br/>`);
+//     }, 1000);
+//   })
+//   .catch((error) => {
+//     document.write(`${error} <br/>`);
+//   });
 /* Analogy:
 Promises can be compared to ordering a pizza. If the pizza is delivered, 
 you receive a "Pizza delivered!" message; otherwise, you get a "Pizza delivery failed!" message. 
@@ -71,22 +78,23 @@ The subsequent actions depend on whether the pizza was delivered.
 // await: Placed before a Promise to wait for its resolution before proceeding.
 
 // Example
-const fetchData = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(`Data fetched successfully!`);
-    }, 2000);
-  });
-};
+// const fetchData = () => {
+//   return new Promise((resolve) => {
+//     setTimeout(() => {
+//       resolve(`Data fetched successfully!`);
+//     }, 2000);
+//   });
+// };
 
-const displayData = async () => {
-  document.write(`Fetching data... <br/>`);
-  const data = await fetchData();
-  console.log(data);
-};
+
+// const displayData = async () => {
+//   document.write(`Fetching data... <br/>`);
+//   const data = await fetchData();
+//   console.log(data);
+// };
 
 // Usage
-displayData();
+// displayData();
 ////////////////////////////////////////////////////////////////
 // JavaScript Classes
 // Classes are templates for creating objects with predefined properties and methods.
@@ -103,6 +111,15 @@ class Car {
   introduce() {
     return `Car: ${this.brand} ${this.model} ${this.year}`;
   }
+}
+class Fruits {
+  constructor(color, taste){
+    this.color = color;
+    this.taste=taste;
+  }
+intro2() {
+  return `Fruits: ${this.color} ${this.taste}`;
+}
 }
 
 // Creating an instance of the class
@@ -129,56 +146,56 @@ console.log(tesla.displayBattery());
 // Creating a Person Class
 // Task: Create a Person class that accepts firstName, lastName, and age. 
 // Include a method studentInfo that returns these details.
-class Person {
-  constructor(firstName, lastName, age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.age = age;
-  }
+// class Person {
+//   constructor(firstName, lastName, age) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.age = age;
+//   }
 
-  studentInfo() {
-    return `Person: ${this.firstName} ${this.lastName}, Age: ${this.age}`;
-  }
-}
+//   studentInfo() {
+//     return `Person: ${this.firstName} ${this.lastName}, Age: ${this.age}`;
+//   }
+// }
 
-const individual = new Person("Neval", "Durmaz", 30);
+// const individual = new Person("Neval", "Durmaz", 30);
 
-console.log(individual);
-console.log(individual.studentInfo());
-////////////////////////////////////////////////////////////////////////
-// Fetch API
-// The Fetch API is used to retrieve data from APIs.
+// console.log(individual);
+// console.log(individual.studentInfo());
+// ////////////////////////////////////////////////////////////////////////
+// // Fetch API
+// // The Fetch API is used to retrieve data from APIs.
 
-// Fetching Users
-const fetchUsers = async () => {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
-  const data = await response.json();
-  return data;
-};
+// // Fetching Users
+// const fetchUsers = async () => {
+//   const response = await fetch(`https://jsonplaceholder.typicode.com/users`);
+//   const data = await response.json();
+//   return data;
+// };
 
-// Usage
-fetchUsers().then(users => console.log(users));
-// Fetching Posts
-// Task: Fetch posts data from the JSONPlaceholder API and log it to the console.
-const fetchPosts = async () => {
-  const response = await fetch(`https://jsonplaceholder.typicode.com/todos`);
-  const posts = await response.json();
-  console.log(posts);
-};
+// // Usage
+// fetchUsers().then(users => console.log(users));
+// // Fetching Posts
+// // Task: Fetch posts data from the JSONPlaceholder API and log it to the console.
+// const fetchPosts = async () => {
+//   const response = await fetch(`https://jsonplaceholder.typicode.com/todos`);
+//   const posts = await response.json();
+//   console.log(posts);
+// };
 
-// Usage
-fetchPosts();
-// Rendering Users to the DOM
-// Task: Use the renderUsers function to display fetched users on the webpage.
-const renderUsers = async () => {
-  const users = await fetchUsers();
-  users.forEach((user) => {
-    document.write(`User Name: ${user.name} <br/>`);
-  });
-};
+// // Usage
+// fetchPosts();
+// // Rendering Users to the DOM
+// // Task: Use the renderUsers function to display fetched users on the webpage.
+// const renderUsers = async () => {
+//   const users = await fetchUsers();
+//   users.forEach((user) => {
+//     document.write(`User Name: ${user.name} <br/>`);
+//   });
+// };
 
-// Usage
-renderUsers();
+// // Usage
+// renderUsers();
 //////////////////////////////////////////////////////////////////////
 // DOM (Document Object Model)
 // The DOM represents the HTML elements of a webpage, allowing JavaScript to manipulate them.
@@ -188,7 +205,7 @@ renderUsers();
 const headings = document.getElementsByTagName("h1");
 console.log(headings);
 // By Class Name
-const titleElements1 = document.getElementsByClassName("title");
+const titleElements1 = document.getElementsByClassName("title"); // .title #title
 console.log(titleElements);
 // By ID
 const titleElements2 = document.getElementsByClassName("title");
