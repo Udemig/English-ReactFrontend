@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD App Project</title>
+    <!-- * Link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- * FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- * Main Container -->
+    <div class="container">
+      <!-- * Form Section -->
+      <form class="form-wrapper">
+        <!-- * Alert Message (Displays notifications) -->
+        <p class="alert"></p>
+        <h2>To do List</h2>
+        <div class="input-container">
+          <!-- * Input Field for adding a new item -->
+          <input type="text" placeholder="Enter a new item..." id="input" />
+          <!-- * Submit Button to add the item to the list -->
+          <button type="submit" class="submit-btn">Add Item</button>
+        </div>
+      </form>
+
+      <!-- * List of Items -->
+      <div class="items-wrapper">
+        <div class="item-list">
+          <!-- Example Item for reference
+          <div class="items-list-item">
+            <p class="item-name">Item Name</p>
+            <div class="btn-container">
+              <button class="edit-btn">
+                <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+              <button class="delete-btn">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- * Button to clear all items from the list -->
+      <button class="clear-btn">Clear List</button>
+    </div>
+
+    <!-- * JavaScript Link -->
+    <script src="main.js"></script>
+  </body>
+</html>
