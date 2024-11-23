@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+        integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- main container  -->
+    <main class="container">
+        <form class="form-container">
+            <h1>To do List</h1>
+            <div class="input-container">
+                <input type="text" placeholder="Add your todo">
+                <button type="submit" class="submit-btn">Add</button>
+            </div>
+            <div class="items-container">
+                <div class="item-list">
+                    <div class="item">
+                        <p></p>
+                        <div class="icons">
+                            <button class="i-edit"> <i class="fa-regular fa-pen-to-square"></i></button>
+                            <buttonon onclick="deleteItem()" class="i-delete"><i class="fa-regular fa-trash-can"></i>
+                            </buttonon>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button class="clear-btn">Clear List</button>
+        </form>
+    </main>
+
+
+
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
