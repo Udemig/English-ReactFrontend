@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Note Keeper</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+       <div class="container">
+        <h1>✨ Enhanced Note Keeper</h1>
+
+        <div class="controls">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search notes..." oninput="filterNotes()">
+            </div>
+            <div class="category-filter">
+                <select id="categoryFilter" onchange="filterNotes()">
+                    <option value="">All Categories</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="note-form">
+            <div class="form-row">
+                <input type="text" id="noteTitle" placeholder="Note Title">
+                <select id="noteCategory">
+                    <option value="">Select Category</option>
+                    <option value="Work">Work</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Ideas">Ideas</option>
+                    <option value="Tasks">Tasks</option>
+                </select>
+            </div>
+            <input type="text" id="noteTags" placeholder="Tags (comma-separated)">
+            <textarea id="noteContent" placeholder="Write your note here..."></textarea>
+            
+            <div class="color-picker" id="colorPicker">
+                <div class="color-option selected" style="background: #ffffff;" data-color="#ffffff"></div>
+                <div class="color-option" style="background: #f8d7da;" data-color="#f8d7da"></div>
+                <div class="color-option" style="background: #d4edda;" data-color="#d4edda"></div>
+                <div class="color-option" style="background: #cce5ff;" data-color="#cce5ff"></div>
+                <div class="color-option" style="background: #fff3cd;" data-color="#fff3cd"></div>
+            </div>
+
+            <div class="button-group">
+                <button onclick="saveNote()" id="saveButton" class="btn-primary">Add Note</button>
+                <button onclick="cancelEdit()" id="cancelButton" class="btn-secondary" style="display: none;">Cancel</button>
+            </div>
+        </div>
+
+        <div class="notes-container" id="notesContainer">
+            <!-- Notes will be added here dynamically -->
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+ 
+
